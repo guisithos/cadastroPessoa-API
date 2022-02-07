@@ -1,4 +1,10 @@
 package br.com.guithomas.springbootmysql.repository;
 
-public interface PessoaRepository {
+import br.com.guithomas.springbootmysql.model.pessoa;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface PessoaRepository extends JpaRepository<pessoa, Long> {
+
 }

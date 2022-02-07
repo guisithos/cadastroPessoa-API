@@ -1,9 +1,19 @@
 package br.com.guithomas.springbootmysql.Controller.dto;
 
+import br.com.guithomas.springbootmysql.model.pessoa;
+
 public class PessoaRs {
     private Long id;
     private String nome;
     private String sobrenome;
+
+    public static PessoaRs converter(pessoa p){
+        var pessoa = new PessoaRs();
+        pessoa.setId(p.getId());
+        pessoa.setNome(p.getNome());
+        pessoa.setSobrenome(p.getSobrenome());
+        return pessoa;
+    }
 
     public Long getId() {
         return id;
